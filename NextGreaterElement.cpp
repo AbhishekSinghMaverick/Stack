@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void printNextGreaterElement(std::vector <long long int> &v)
+void NextGreaterElement(vector <long long int> &v)
 {
 	std::stack <long long int> stk;
 	long long int arr[v.size()];
@@ -17,14 +17,23 @@ void printNextGreaterElement(std::vector <long long int> &v)
 		std::cout << i << " ";
 	}
 		std::cout << "\n";
-
 }
-
-int main()
+int main() 
 {
-
-	std::vector <long long int> v = { 5,3,2,10,6,8,1,4,12,7,4 };
-	printNextGreaterElement(v);
+	int T;
+	cin >> T;
+	while(T--)
+    {
+        vector <long long int> v;
+        long long int n,num;
+        cin >> n;
+        for(int i = 0; i < n; i++)
+	    {
+	        cin >> num;
+	        v.push_back(num);
+	    }
+	    NextGreaterElement(v);
+	    v.clear();
+    }
 	return 0;
-	
 }
